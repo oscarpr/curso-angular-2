@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5">
+            <h1>Competiciones</h1>
+            <div class="list-group" id="lista-competiciones">
+                <a class="competicion list-group-item list-group-item-action" *ngFor="let competicion of competiciones" (click)="competicionseleccionada = competicion.id">
+                {{competicion.caption}}
+            </a>
+            </div>
+        </div>
+        <div class="col-md-7" id="tabla-posiciones">
+            <tabla-posiciones [idcompeticion]="competicionseleccionada"></tabla-posiciones>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<div *ngIf="!competicion">
+    <img src="/recursos/seleccione-una.png" alt="Imagen">
+</div>
+<div *ngIf="competicion">
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+            <p> {{competicion.leagueCaption}}</p>
+        </div>
+
+        <!-- Table -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Nombre equipo</td>
+                    <td>PJ</td>
+                    <td>GF</td>
+                    <td>GC</td>
+                    <td>DG</td>
+                    <td>Puntos</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let equipo of competicion['standing']">
+                    <td>{{equipo.position}}</td>
+                    <td>{{equipo.teamName}}</td>
+                    <td>{{equipo.playedGames}}</td>
+                    <td>{{equipo.goals}}</td>
+                    <td>{{equipo.goalsAgainst}}</td>
+                    <td>{{equipo.goalDifference}}</td>
+                    <td>{{equipo.points}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
