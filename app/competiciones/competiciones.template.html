@@ -4,7 +4,7 @@
             <h1>Competiciones</h1>
             <div class="list-group" id="lista-competiciones">
                 <a class="competicion list-group-item list-group-item-action" *ngFor="let competicion of competiciones" (click)="competicionseleccionada = competicion.id">
-                {{competicion.caption}}
+                {{competicion.caption | nombrecompeticion | uppercase}}
             </a>
             </div>
         </div>

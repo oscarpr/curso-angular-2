@@ -7,6 +7,7 @@ export class HttpServico {
     private baseURL: string = 'http://api.football-data.org/';
     private tablaPosicionesURL: string = ''
     private header: Headers;
+    private competiciones: Array<Object>;
 
 
     constructor(private http: Http) {

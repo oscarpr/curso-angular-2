@@ -15,10 +15,7 @@ export class ComponenteCompeticiones implements OnInit {
     ngOnInit() {
         this.http.obtenerCompeticiones().subscribe(
             dato => this.competiciones = dato,
-            err => console.log(err),
-            () => {
-                this.tratarCompeticiones();
-            }
+            err => console.log(err)
         );
     }
 
